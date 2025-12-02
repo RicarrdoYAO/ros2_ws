@@ -1,0 +1,37 @@
+[0.467s] Invoking command in '/home/yaohouyu/ros2_ws/src/iiwa_mujoco_viewer': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/iiwa_mujoco_viewer build --build-base /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/build install --record /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/install.log --single-version-externally-managed install_data
+[0.612s] running egg_info
+[0.612s] creating ../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info
+[0.626s] writing ../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info/PKG-INFO
+[0.626s] writing dependency_links to ../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info/dependency_links.txt
+[0.626s] writing entry points to ../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info/entry_points.txt
+[0.626s] writing requirements to ../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info/requires.txt
+[0.626s] writing top-level names to ../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info/top_level.txt
+[0.626s] writing manifest file '../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info/SOURCES.txt'
+[0.645s] reading manifest file '../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info/SOURCES.txt'
+[0.646s] writing manifest file '../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info/SOURCES.txt'
+[0.646s] running build
+[0.646s] running build_py
+[0.647s] creating /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/build
+[0.647s] creating /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/build/lib
+[0.647s] creating /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/build/lib/iiwa_mujoco_viewer
+[0.647s] copying iiwa_mujoco_viewer/__init__.py -> /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/build/lib/iiwa_mujoco_viewer
+[0.647s] copying iiwa_mujoco_viewer/viewer_node.py -> /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/build/lib/iiwa_mujoco_viewer
+[0.647s] running install
+[0.650s] running install_lib
+[0.660s] creating /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/lib/python3.12/site-packages/iiwa_mujoco_viewer
+[0.660s] copying /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/build/lib/iiwa_mujoco_viewer/__init__.py -> /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/lib/python3.12/site-packages/iiwa_mujoco_viewer
+[0.660s] copying /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/build/lib/iiwa_mujoco_viewer/viewer_node.py -> /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/lib/python3.12/site-packages/iiwa_mujoco_viewer
+[0.660s] byte-compiling /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/lib/python3.12/site-packages/iiwa_mujoco_viewer/__init__.py to __init__.cpython-312.pyc
+[0.660s] byte-compiling /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/lib/python3.12/site-packages/iiwa_mujoco_viewer/viewer_node.py to viewer_node.cpython-312.pyc
+[0.661s] running install_data
+[0.661s] creating /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/share/ament_index
+[0.661s] creating /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/share/ament_index/resource_index
+[0.661s] creating /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/share/ament_index/resource_index/packages
+[0.661s] copying resource/iiwa_mujoco_viewer -> /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/share/ament_index/resource_index/packages
+[0.661s] copying package.xml -> /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/share/iiwa_mujoco_viewer
+[0.661s] running install_egg_info
+[0.671s] Copying ../../build/iiwa_mujoco_viewer/iiwa_mujoco_viewer.egg-info to /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/lib/python3.12/site-packages/iiwa_mujoco_viewer-0.0.0-py3.12.egg-info
+[0.671s] running install_scripts
+[0.741s] Installing viewer script to /home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/lib/iiwa_mujoco_viewer
+[0.741s] writing list of installed files to '/home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/install.log'
+[0.757s] Invoked command in '/home/yaohouyu/ros2_ws/src/iiwa_mujoco_viewer' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/iiwa_mujoco_viewer build --build-base /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/build install --record /home/yaohouyu/ros2_ws/build/iiwa_mujoco_viewer/install.log --single-version-externally-managed install_data

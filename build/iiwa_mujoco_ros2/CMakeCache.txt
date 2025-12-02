@@ -120,8 +120,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:UNINITIALIZED=ON
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/yaohouyu/ros2_ws/build/iiwa_mujoco_ros2/CMakeFiles/pkgRedirects
@@ -346,6 +346,9 @@ ament_cmake_xmllint_DIR:PATH=/opt/ros/jazzy/share/ament_cmake_xmllint/cmake
 //Path to a program.
 ament_cppcheck_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_cppcheck
 
+//Path to a program.
+ament_flake8_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_flake8
+
 //The directory containing a CMake configuration file for ament_index_cpp.
 ament_index_cpp_DIR:PATH=/opt/ros/jazzy/share/ament_index_cpp/cmake
 
@@ -357,6 +360,9 @@ ament_lint_cmake_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_lint_cmake
 
 //The directory containing a CMake configuration file for ament_lint_common.
 ament_lint_common_DIR:PATH=/opt/ros/jazzy/share/ament_lint_common/cmake
+
+//Path to a program.
+ament_pep257_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_pep257
 
 //Path to a program.
 ament_uncrustify_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_uncrustify
@@ -579,8 +585,6 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
-CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.

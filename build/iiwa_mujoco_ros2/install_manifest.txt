@@ -20,6 +20,7 @@
 /home/yaohouyu/ros2_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/CHANGELOG.md
 /home/yaohouyu/ros2_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/LICENSE
 /home/yaohouyu/ros2_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/iiwa_14.png
+/home/yaohouyu/ros2_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/launch/simulation.launch.py
 /home/yaohouyu/ros2_ws/install/iiwa_mujoco_ros2/share/ament_index/resource_index/package_run_dependencies/iiwa_mujoco_ros2
 /home/yaohouyu/ros2_ws/install/iiwa_mujoco_ros2/share/ament_index/resource_index/parent_prefix_path/iiwa_mujoco_ros2
 /home/yaohouyu/ros2_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/environment/ament_prefix_path.sh

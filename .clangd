@@ -1,0 +1,6 @@
+CompileFlags:
+  Compiler: /usr/bin/g++
+  
+Diagnostics:
+  Suppress:
+    - unused-includes

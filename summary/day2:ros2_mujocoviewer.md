@@ -111,3 +111,21 @@ source ~/ros2_ws/install/setup.bash
 ros2 topic echo /iiwa/joint_states
 ```
 
+### 关于clangd
+colcon build \
+  --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+ln -s build/compile_commands.json .
+
+### 关于launch
+cd ~/ros2_ws/src/iiwa_mujoco_ros2
+mkdir -p launch
+colcon build --symlink-install
+source install/setup.bash
+ros2 launch iiwa_mujoco_ros2 simulation.launch.py 
+
+在cmakelist里面
+install(
+  DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)

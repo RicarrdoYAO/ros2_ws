@@ -95,6 +95,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/iiwa_mujoco_ros2" TYPE DIRECTORY FILES "/home/yaohouyu/ros2_ws/src/iiwa_mujoco_ros2/launch")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/yaohouyu/ros2_ws/build/iiwa_mujoco_ros2/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/iiwa_mujoco_ros2")
 endif()
 
