@@ -1,0 +1,63 @@
+[0.013s] Invoking command in '/home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/yaohouyu/ros2_ws/src/iiwa_mujoco_torque -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque
+[0.147s] -- The C compiler identification is GNU 13.3.0
+[0.147s] -- The CXX compiler identification is GNU 13.3.0
+[0.148s] -- Detecting C compiler ABI info
+[0.163s] -- Detecting C compiler ABI info - done
+[0.168s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.168s] -- Detecting C compile features
+[0.169s] -- Detecting C compile features - done
+[0.175s] -- Detecting CXX compiler ABI info
+[0.239s] -- Detecting CXX compiler ABI info - done
+[0.244s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.244s] -- Detecting CXX compile features
+[0.246s] -- Detecting CXX compile features - done
+[0.247s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.343s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.406s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.428s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.436s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.446s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.457s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.501s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.503s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.553s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.569s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.587s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.635s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.644s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.734s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.734s] -- Configured cppcheck include dirs: 
+[0.734s] -- Configured cppcheck exclude dirs and/or files: 
+[0.735s] -- Added test 'lint_cmake' to check CMake code style
+[0.735s] -- Added test 'uncrustify' to check C / C++ code style
+[0.735s] -- Configured uncrustify additional arguments: 
+[0.736s] -- Added test 'xmllint' to check XML markup files
+[0.737s] -- Configuring done (0.7s)
+[0.743s] -- Generating done (0.0s)
+[0.746s] -- Build files have been written to: /home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque
+[0.753s] Invoked command in '/home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/yaohouyu/ros2_ws/src/iiwa_mujoco_torque -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque
+[0.754s] Invoking command in '/home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque -- -j6 -l6
+[0.793s] [ 50%] [32mBuilding CXX object CMakeFiles/torque_controller.dir/src/torque_controller.cpp.o[0m
+[5.955s] [100%] [32m[1mLinking CXX executable torque_controller[0m
+[6.057s] [100%] Built target torque_controller
+[6.064s] Invoked command in '/home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque -- -j6 -l6
+[6.072s] Invoking command in '/home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque
+[6.075s] -- Install configuration: ""
+[6.075s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/lib/iiwa_mujoco_torque/torque_controller
+[6.076s] -- Set non-toolchain portion of runtime path of "/home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/lib/iiwa_mujoco_torque/torque_controller" to ""
+[6.076s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/ament_index/resource_index/package_run_dependencies/iiwa_mujoco_torque
+[6.076s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/ament_index/resource_index/parent_prefix_path/iiwa_mujoco_torque
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/environment/ament_prefix_path.sh
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/environment/ament_prefix_path.dsv
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/environment/path.sh
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/environment/path.dsv
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/local_setup.bash
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/local_setup.sh
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/local_setup.zsh
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/local_setup.dsv
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.dsv
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/ament_index/resource_index/packages/iiwa_mujoco_torque
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/cmake/iiwa_mujoco_torqueConfig.cmake
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/cmake/iiwa_mujoco_torqueConfig-version.cmake
+[6.077s] -- Installing: /home/yaohouyu/ros2_ws/src/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.xml
+[6.081s] Invoked command in '/home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yaohouyu/ros2_ws/install/iiwa_mujoco_viewer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_ws/src/build/iiwa_mujoco_torque

@@ -1,0 +1,6 @@
+source;share/iiwa_mujoco_torque_viewer/hook/pythonpath.ps1
+source;share/iiwa_mujoco_torque_viewer/hook/pythonpath.dsv
+source;share/iiwa_mujoco_torque_viewer/hook/pythonpath.sh
+source;share/iiwa_mujoco_torque_viewer/hook/ament_prefix_path.ps1
+source;share/iiwa_mujoco_torque_viewer/hook/ament_prefix_path.dsv
+source;share/iiwa_mujoco_torque_viewer/hook/ament_prefix_path.sh

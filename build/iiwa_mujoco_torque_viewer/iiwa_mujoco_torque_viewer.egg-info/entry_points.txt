@@ -1,0 +1,2 @@
+[console_scripts]
+torque_viewer = iiwa_mujoco_torque_viewer.torque_viewer_node:main

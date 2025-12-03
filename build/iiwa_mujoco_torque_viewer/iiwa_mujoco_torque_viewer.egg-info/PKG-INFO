@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: iiwa-mujoco-torque-viewer
+Version: 0.0.0
+Summary: TODO: Package description
+Maintainer: yaohouyu
+Maintainer-email: yaohouyu@mail.ustc.edu.cn
+License: TODO: License declaration
+Provides-Extra: test
