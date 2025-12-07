@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from rclpy.serialization import deserialize_message
 from sensor_msgs.msg import JointState
 
-bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251207_212946"   # 改成你的路径
+bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251207_215148"   # 改成你的路径
 
 reader = rosbag2_py.SequentialReader()
 storage_options = rosbag2_py.StorageOptions(uri=bag_path, storage_id="mcap")

@@ -6,7 +6,7 @@
   <default>
     <default class="iiwa">
       <material specular="0.5" shininess="0.25"/>
-      <joint axis="0 0 1" damping="0.1" frictionloss="0.1"/>
+      <joint axis="0 0 1" damping="0" frictionloss="0"/>
       <general gaintype="fixed" biastype="affine" gainprm="1" forcerange="-3320 3320"/>
       <default class="joint1">
         <joint range="-2.96706 2.96706"/>
