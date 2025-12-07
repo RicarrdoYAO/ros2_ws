@@ -7,36 +7,40 @@
 
 using namespace std::chrono_literals;
 
-class IiwaPDHoldGController : public rclcpp::Node
+// 类名改为了 CTCController 以区分
+class IiwaCTCController : public rclcpp::Node
 {
 public:
-    IiwaPDHoldGController()
-    : Node("iiwa_pd_hold_gravity_controller")
+    IiwaCTCController()
+    : Node("iiwa_ctc_controller")
     {
         sub_state_ = this->create_subscription<sensor_msgs::msg::JointState>(
             "iiwa/joint_states", 10,
-            std::bind(&IiwaPDHoldGController::state_callback, this, std::placeholders::_1));
+            std::bind(&IiwaCTCController::state_callback, this, std::placeholders::_1));
 
         pub_torque_ = this->create_publisher<sensor_msgs::msg::JointState>(
             "iiwa/joint_torque", 10);
 
         timer_ = this->create_wall_timer(
-            5ms, std::bind(&IiwaPDHoldGController::control_loop, this));
+            1ms, std::bind(&IiwaCTCController::control_loop, this));
 
         // ---------------- PD 增益 ----------------
-        Kp_ = {10, 10, 10, 10, 10, 10, 5};
-        Kd_ = { 1,  1,  1,  1,  1,  1,  0.5};
+        // CTC 模式下，由于非线性项被抵消，系统近似为线性二阶系统
+        // 这里可以适当提高一点增益，或者保持原样测试
+        Kp_ = {300.0, 200.0, 400.0, 400.0, 500.0, 500.0, 500.0};
+        Kd_ = { 30.0,  30.0,  36.0,  36.0,  40.0,  40.0,  40.0};
 
         q_.resize(7, 0.0);
         dq_.resize(7, 0.0);
         qd_.resize(7, 0.0);
         dqd_.resize(7, 0.0);
+        ddqd_.resize(7, 0.0); // [新增] 期望加速度
 
         initialized_ = false;
 
         // ---------------- 正弦轨迹参数 ----------------
         amp_.assign(7, 0.5);   // 每关节最大幅值 0.5 rad
-        freq_ = {0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 0.1};
+        freq_ = {0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1};
 
         start_time_ = this->now();
 
@@ -57,7 +61,7 @@ public:
         d_ = mj_makeData(m_);
     }
 
-    ~IiwaPDHoldGController()
+    ~IiwaCTCController()
     {
         if (d_) mj_deleteData(d_);
         if (m_) mj_deleteModel(m_);
@@ -75,57 +79,75 @@ private:
 
         if (!initialized_) {
             initialized_ = true;
-            RCLCPP_INFO(this->get_logger(), "Gravity PD + sine tracking initialized.");
+            RCLCPP_INFO(this->get_logger(), "CTC Controller (Inverse Dynamics) initialized.");
         }
     }
 
-    // ============================ 控制循环 ============================
+    // ============================ 控制循环 (CTC 核心) ============================
     void control_loop()
     {
         if (!initialized_) return;
 
         double t = (this->now() - start_time_).seconds();
 
-        // ----------- 1. 正弦轨迹生成 -----------
+        // ----------- 1. 正弦轨迹生成 (Pos, Vel, Acc) -----------
         for (int i = 0; i < 7; ++i)
         {
             double A = amp_[i];
             double w = freq_[i];
 
+            // 位置 q_d
             qd_[i]  = A * sin(w * t);
+            
+            // 速度 dq_d = d/dt(Pos)
             dqd_[i] = A * w * cos(w * t);
+            
+            // 加速度 ddq_d = d/dt(Vel) [新增]
+            ddqd_[i] = -A * w * w * sin(w * t); 
         }
 
-        // ----------- 2. 计算重力补偿 g(q) -----------
+        // ----------- 2. 准备逆动力学输入 -----------
+        // 公式：tau = M(q) * (ddqd + Kp*e + Kd*ed) + C(q,dq)*dq + g(q)
+        // 在 MuJoCo 中，我们只需要把 "ddqd + Kp*e + Kd*ed" 填入 d_->qacc
+        // 并把当前真实状态 q, dq 填入 d_->qpos, d_->qvel
+        // mj_inverse 会自动完成上述公式计算
+
         for (int i = 0; i < 7; ++i) {
+            // 2.1 填入真实状态
             d_->qpos[i] = q_[i];
-            d_->qvel[i] = 0;   // 只要重力项，不要科氏力
+            d_->qvel[i] = dq_[i]; // [关键修改] 这里必须是真实速度，用于计算科氏力/离心力
+
+            // 2.2 计算误差
+            double e  = qd_[i]  - q_[i];
+            double ed = dqd_[i] - dq_[i];
+
+            // 2.3 计算虚拟控制量 (目标加速度)
+            double v = ddqd_[i] + Kp_[i] * e + Kd_[i] * ed;
+
+            // 2.4 填入 MuJoCo 加速度槽
+            d_->qacc[i] = v;
         }
 
-        mj_forward(m_, d_); // 更新动力学
+        // ----------- 3. 调用 MuJoCo 逆动力学 -----------
+        // 这步计算完成后，结果存储在 d_->qfrc_inverse 中
+        mj_inverse(m_, d_); 
 
-        std::vector<double> g(7);
-        for (int i = 0; i < 7; ++i)
-            g[i] = d_->qfrc_bias[i];
-
-        // ----------- 3. PD + 力矩限幅 -----------
+        // ----------- 4. 获取力矩并限幅 -----------
         std::vector<double> tau(7);
 
         for (int i = 0; i < 7; ++i)
         {
-            double e  = qd_[i]  - q_[i];
-            double ed = dqd_[i] - dq_[i];
+            // 从 qfrc_inverse 读取结果
+            double out = d_->qfrc_inverse[i];
 
-            double out = g[i] + Kp_[i] * e + Kd_[i] * ed;
-
-            // 关节独立限幅（方案 C）
+            // 关节独立限幅
             if (out >  tau_limit_[i]) out =  tau_limit_[i];
             if (out < -tau_limit_[i]) out = -tau_limit_[i];
 
             tau[i] = out;
         }
 
-        // ----------- 4. 发布力矩 -----------
+        // ----------- 5. 发布力矩 -----------
         sensor_msgs::msg::JointState msg;
         msg.header.stamp = this->now();
         msg.effort = tau;
@@ -138,7 +160,7 @@ private:
     rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr    pub_torque_;
     rclcpp::TimerBase::SharedPtr                                  timer_;
 
-    std::vector<double> q_, dq_, qd_, dqd_;
+    std::vector<double> q_, dq_, qd_, dqd_, ddqd_; // [修改] 增加了 ddqd_
     std::vector<double> Kp_, Kd_;
     bool initialized_;
 
@@ -152,13 +174,13 @@ private:
 
     // MuJoCo
     mjModel* m_;
-    mjData*  d_;
+    mjData* d_;
 };
 
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<IiwaPDHoldGController>());
+    rclcpp::spin(std::make_shared<IiwaCTCController>());
     rclcpp::shutdown();
     return 0;
 }

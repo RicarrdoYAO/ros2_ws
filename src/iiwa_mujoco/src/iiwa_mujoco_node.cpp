@@ -79,7 +79,7 @@ public:
             "iiwa/joint_torque", 10,
             std::bind(&IiwaMujocoSim::torque_callback, this, std::placeholders::_1));
 
-        timer_ = this->create_wall_timer(10ms, std::bind(&IiwaMujocoSim::sim_step, this));
+        timer_ = this->create_wall_timer(1ms, std::bind(&IiwaMujocoSim::sim_step, this));
     }
 
     ~IiwaMujocoSim()

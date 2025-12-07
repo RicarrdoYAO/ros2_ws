@@ -58,6 +58,12 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+install(
+  DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+
 add_executable(iiwa_pd_hold_node src/iiwa_pd_hold_node.cpp)
 ament_target_dependencies(iiwa_pd_hold_node rclcpp sensor_msgs)
 target_link_libraries(iiwa_pd_hold_node mujoco)

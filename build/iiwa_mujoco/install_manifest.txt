@@ -1,5 +1,6 @@
 /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_controller_node
 /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_mujoco_node
+/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/launch/iiwa_sim_ctrl_bag.launch.py
 /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_pd_hold_node
 /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/ament_index/resource_index/package_run_dependencies/iiwa_mujoco
 /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/ament_index/resource_index/parent_prefix_path/iiwa_mujoco
