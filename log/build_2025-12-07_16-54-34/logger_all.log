@@ -1,0 +1,283 @@
+[0.086s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.086s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x753cb7775520>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x753cb78ef320>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x753cb78ef320>>)
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.119s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/yaohouyu/ros2_mujoco_ws'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco) by extension 'ignore_ament_install'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco) by extensions ['colcon_pkg']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco) by extension 'colcon_pkg'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco) by extensions ['colcon_meta']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco) by extension 'ros'
+[0.139s] DEBUG:colcon.colcon_core.package_identification:Package 'src/iiwa_mujoco' with type 'ros.ament_cmake' and name 'iiwa_mujoco'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_ros2) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_ros2) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_ros2) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_ros2) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_ros2) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_ros2) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_ros2) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_ros2) by extension 'ros'
+[0.140s] DEBUG:colcon.colcon_core.package_identification:Package 'src/iiwa_mujoco_ros2' with type 'ros.ament_cmake' and name 'iiwa_mujoco_ros2'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_torque) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_torque) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_torque) by extension 'ignore_ament_install'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_torque) by extensions ['colcon_pkg']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_torque) by extension 'colcon_pkg'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_torque) by extensions ['colcon_meta']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_torque) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_torque) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/iiwa_mujoco_torque) by extension 'ros'
+[0.141s] DEBUG:colcon.colcon_core.package_identification:Package 'src/iiwa_mujoco_torque' with type 'ros.ament_cmake' and name 'iiwa_mujoco_torque'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extensions ['ignore', 'ignore_ament_install']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extension 'ignore'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extension 'ros'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extensions ['cmake', 'python']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extension 'cmake'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extension 'python'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extensions ['python_setup_py']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(summary) by extension 'python_setup_py'
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.153s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.153s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.154s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/yaohouyu/ros2_mujoco_ws/install
+[0.154s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 285 installed packages in /opt/ros/jazzy
+[0.155s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco' build argument 'cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco' build argument 'cmake_target' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco' build argument 'cmake_clean_cache' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco' build argument 'cmake_clean_first' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco' build argument 'cmake_force_configure' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco' build argument 'ament_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco' build argument 'catkin_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.179s] DEBUG:colcon.colcon_core.verb:Building package 'iiwa_mujoco' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco', 'merge_install': False, 'path': '/home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco', 'symlink_install': False, 'test_result_base': None}
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_ros2' build argument 'cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_ros2' build argument 'cmake_target' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.179s] DEBUG:colcon.colcon_core.verb:Building package 'iiwa_mujoco_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2', 'merge_install': False, 'path': '/home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_torque' build argument 'cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_torque' build argument 'cmake_target' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_torque' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_torque' build argument 'cmake_clean_cache' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_torque' build argument 'cmake_clean_first' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_torque' build argument 'cmake_force_configure' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_torque' build argument 'ament_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_torque' build argument 'catkin_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'iiwa_mujoco_torque' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.179s] DEBUG:colcon.colcon_core.verb:Building package 'iiwa_mujoco_torque' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque', 'merge_install': False, 'path': '/home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_torque', 'symlink_install': False, 'test_result_base': None}
+[0.179s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.181s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.181s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco' with build type 'ament_cmake'
+[0.181s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco'
+[0.183s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.183s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.183s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.185s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_ros2' with build type 'ament_cmake'
+[0.185s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_ros2'
+[0.185s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.186s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.187s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_torque' with build type 'ament_cmake'
+[0.187s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_torque'
+[0.188s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.188s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.192s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco -- -j6 -l6
+[0.195s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2 -- -j6 -l6
+[0.199s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque -- -j6 -l6
+[0.251s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2 -- -j6 -l6
+[0.257s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2
+[0.258s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque -- -j6 -l6
+[0.260s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque
+[0.268s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_mujoco_torque)
+[0.271s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque
+[0.272s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque' for CMake module files
+[0.272s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque' for CMake config files
+[0.272s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_mujoco_torque', 'cmake_prefix_path')
+[0.272s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/hook/cmake_prefix_path.ps1'
+[0.273s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/hook/cmake_prefix_path.dsv'
+[0.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/hook/cmake_prefix_path.sh'
+[0.274s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/lib'
+[0.274s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/bin'
+[0.274s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/lib/pkgconfig/iiwa_mujoco_torque.pc'
+[0.274s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/lib/python3.12/site-packages'
+[0.274s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/bin'
+[0.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.ps1'
+[0.275s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.dsv'
+[0.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.sh'
+[0.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.bash'
+[0.276s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.zsh'
+[0.276s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/colcon-core/packages/iiwa_mujoco_torque)
+[0.276s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_mujoco_torque)
+[0.276s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque' for CMake module files
+[0.277s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque' for CMake config files
+[0.277s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_mujoco_torque', 'cmake_prefix_path')
+[0.277s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/hook/cmake_prefix_path.ps1'
+[0.277s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/hook/cmake_prefix_path.dsv'
+[0.277s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/hook/cmake_prefix_path.sh'
+[0.278s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/lib'
+[0.278s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/bin'
+[0.278s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/lib/pkgconfig/iiwa_mujoco_torque.pc'
+[0.278s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/lib/python3.12/site-packages'
+[0.278s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/bin'
+[0.278s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.ps1'
+[0.279s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.dsv'
+[0.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.sh'
+[0.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.bash'
+[0.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/iiwa_mujoco_torque/package.zsh'
+[0.280s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_torque/share/colcon-core/packages/iiwa_mujoco_torque)
+[0.280s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_mujoco_ros2)
+[0.280s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2' for CMake module files
+[0.281s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2' for CMake config files
+[0.281s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2
+[0.282s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_mujoco_ros2', 'cmake_prefix_path')
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/hook/cmake_prefix_path.ps1'
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/hook/cmake_prefix_path.dsv'
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/hook/cmake_prefix_path.sh'
+[0.283s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib'
+[0.283s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/bin'
+[0.283s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib/pkgconfig/iiwa_mujoco_ros2.pc'
+[0.283s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib/python3.12/site-packages'
+[0.283s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/bin'
+[0.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.ps1'
+[0.283s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.dsv'
+[0.284s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.sh'
+[0.284s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.bash'
+[0.284s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.zsh'
+[0.284s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/colcon-core/packages/iiwa_mujoco_ros2)
+[0.285s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_mujoco_ros2)
+[0.285s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2' for CMake module files
+[0.285s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2' for CMake config files
+[0.285s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_mujoco_ros2', 'cmake_prefix_path')
+[0.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/hook/cmake_prefix_path.ps1'
+[0.285s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/hook/cmake_prefix_path.dsv'
+[0.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/hook/cmake_prefix_path.sh'
+[0.286s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib'
+[0.286s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/bin'
+[0.286s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib/pkgconfig/iiwa_mujoco_ros2.pc'
+[0.286s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib/python3.12/site-packages'
+[0.286s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/bin'
+[0.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.ps1'
+[0.287s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.dsv'
+[0.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.sh'
+[0.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.bash'
+[0.288s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.zsh'
+[0.288s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/colcon-core/packages/iiwa_mujoco_ros2)
+[5.298s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco -- -j6 -l6
+[5.299s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco
+[5.308s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_mujoco)
+[5.308s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco' for CMake module files
+[5.308s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco
+[5.308s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco' for CMake config files
+[5.309s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_mujoco', 'cmake_prefix_path')
+[5.309s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/hook/cmake_prefix_path.ps1'
+[5.309s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/hook/cmake_prefix_path.dsv'
+[5.309s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/hook/cmake_prefix_path.sh'
+[5.310s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib'
+[5.310s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/bin'
+[5.310s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/pkgconfig/iiwa_mujoco.pc'
+[5.310s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/python3.12/site-packages'
+[5.310s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/bin'
+[5.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.ps1'
+[5.311s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.dsv'
+[5.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.sh'
+[5.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.bash'
+[5.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.zsh'
+[5.312s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/colcon-core/packages/iiwa_mujoco)
+[5.312s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(iiwa_mujoco)
+[5.312s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco' for CMake module files
+[5.312s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco' for CMake config files
+[5.313s] Level 1:colcon.colcon_core.shell:create_environment_hook('iiwa_mujoco', 'cmake_prefix_path')
+[5.313s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/hook/cmake_prefix_path.ps1'
+[5.313s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/hook/cmake_prefix_path.dsv'
+[5.313s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/hook/cmake_prefix_path.sh'
+[5.314s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib'
+[5.314s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/bin'
+[5.314s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/pkgconfig/iiwa_mujoco.pc'
+[5.314s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/python3.12/site-packages'
+[5.314s] Level 1:colcon.colcon_core.environment:checking '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/bin'
+[5.314s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.ps1'
+[5.315s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.dsv'
+[5.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.sh'
+[5.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.bash'
+[5.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.zsh'
+[5.316s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/colcon-core/packages/iiwa_mujoco)
+[5.316s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.316s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.316s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.317s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.320s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.321s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.321s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.330s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.330s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yaohouyu/ros2_mujoco_ws/install/local_setup.ps1'
+[5.331s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/yaohouyu/ros2_mujoco_ws/install/_local_setup_util_ps1.py'
+[5.332s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yaohouyu/ros2_mujoco_ws/install/setup.ps1'
+[5.333s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yaohouyu/ros2_mujoco_ws/install/local_setup.sh'
+[5.333s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/yaohouyu/ros2_mujoco_ws/install/_local_setup_util_sh.py'
+[5.333s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yaohouyu/ros2_mujoco_ws/install/setup.sh'
+[5.334s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yaohouyu/ros2_mujoco_ws/install/local_setup.bash'
+[5.334s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yaohouyu/ros2_mujoco_ws/install/setup.bash'
+[5.335s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yaohouyu/ros2_mujoco_ws/install/local_setup.zsh'
+[5.335s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yaohouyu/ros2_mujoco_ws/install/setup.zsh'

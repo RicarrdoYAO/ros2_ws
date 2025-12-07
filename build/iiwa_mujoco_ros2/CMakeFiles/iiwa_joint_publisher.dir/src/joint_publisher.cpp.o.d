@@ -1,5 +1,5 @@
 CMakeFiles/iiwa_joint_publisher.dir/src/joint_publisher.cpp.o: \
- /home/yaohouyu/ros2_ws/src/iiwa_mujoco_ros2/src/joint_publisher.cpp \
+ /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_ros2/src/joint_publisher.cpp \
  /usr/include/stdc-predef.h \
  /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/13/csignal \

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yaohouyu/ros2_ws/src/iiwa_mujoco_ros2
+CMAKE_SOURCE_DIR = /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yaohouyu/ros2_ws/build/iiwa_mujoco_ros2
+CMAKE_BINARY_DIR = /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2
 
 # Utility rule file for iiwa_mujoco_ros2_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/iiwa_mujoco_ros2_uninstall.dir/compiler_depend.make
 include CMakeFiles/iiwa_mujoco_ros2_uninstall.dir/progress.make
 
 CMakeFiles/iiwa_mujoco_ros2_uninstall:
-	/usr/bin/cmake -P /home/yaohouyu/ros2_ws/build/iiwa_mujoco_ros2/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 iiwa_mujoco_ros2_uninstall: CMakeFiles/iiwa_mujoco_ros2_uninstall
 iiwa_mujoco_ros2_uninstall: CMakeFiles/iiwa_mujoco_ros2_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/iiwa_mujoco_ros2_uninstall.dir/clean:
 .PHONY : CMakeFiles/iiwa_mujoco_ros2_uninstall.dir/clean
 
 CMakeFiles/iiwa_mujoco_ros2_uninstall.dir/depend:
-	cd /home/yaohouyu/ros2_ws/build/iiwa_mujoco_ros2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaohouyu/ros2_ws/src/iiwa_mujoco_ros2 /home/yaohouyu/ros2_ws/src/iiwa_mujoco_ros2 /home/yaohouyu/ros2_ws/build/iiwa_mujoco_ros2 /home/yaohouyu/ros2_ws/build/iiwa_mujoco_ros2 /home/yaohouyu/ros2_ws/build/iiwa_mujoco_ros2/CMakeFiles/iiwa_mujoco_ros2_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_ros2 /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_ros2 /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2 /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2 /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2/CMakeFiles/iiwa_mujoco_ros2_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/iiwa_mujoco_ros2_uninstall.dir/depend
 

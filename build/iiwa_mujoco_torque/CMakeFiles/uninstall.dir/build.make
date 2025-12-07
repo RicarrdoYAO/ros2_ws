@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yaohouyu/ros2_ws/src/iiwa_mujoco_torque
+CMAKE_SOURCE_DIR = /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_torque
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque
+CMAKE_BINARY_DIR = /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaohouyu/ros2_ws/src/iiwa_mujoco_torque /home/yaohouyu/ros2_ws/src/iiwa_mujoco_torque /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_torque /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_torque /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

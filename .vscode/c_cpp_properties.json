@@ -4,7 +4,16 @@
             "name": "ROS2",
             "includePath": [
                 "${workspaceFolder}/**",
+
+                // MuJoCo include 路径（必须加）
+                "/home/yaohouyu/mujoco-3.3.7-linux-x86_64/mujoco-3.3.7/include",
+
+                // 优先让 clangd 找到正确的 joint_state.hpp
+                "/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/**",
+
+                // 其他 ROS include 再找
                 "/opt/ros/jazzy/include/**",
+
                 "/usr/include/**"
             ],
             "defines": [],

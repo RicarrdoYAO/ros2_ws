@@ -1,0 +1,25 @@
+[ 33%] Built target iiwa_pd_hold_node
+[ 50%] [32mBuilding CXX object CMakeFiles/iiwa_controller_node.dir/src/iiwa_controller_node.cpp.o[0m
+[ 83%] Built target iiwa_mujoco_node
+[100%] [32m[1mLinking CXX executable iiwa_controller_node[0m
+[100%] Built target iiwa_controller_node
+-- Install configuration: ""
+-- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_controller_node
+-- Set non-toolchain portion of runtime path of "/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_controller_node" to ""
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_mujoco_node
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_pd_hold_node
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/ament_index/resource_index/package_run_dependencies/iiwa_mujoco
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/ament_index/resource_index/parent_prefix_path/iiwa_mujoco
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/environment/ament_prefix_path.sh
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/environment/path.sh
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/environment/path.dsv
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/local_setup.bash
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/local_setup.sh
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/local_setup.zsh
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/local_setup.dsv
+-- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.dsv
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/ament_index/resource_index/packages/iiwa_mujoco
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/cmake/iiwa_mujocoConfig.cmake
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/cmake/iiwa_mujocoConfig-version.cmake
+-- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.xml

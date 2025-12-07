@@ -1,2 +1,0 @@
-[console_scripts]
-viewer = iiwa_mujoco_viewer.viewer_node:main

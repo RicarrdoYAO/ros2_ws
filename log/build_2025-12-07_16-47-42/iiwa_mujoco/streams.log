@@ -1,0 +1,29 @@
+[0.010s] Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco -- -j6 -l6
+[0.048s] [ 33%] Built target iiwa_mujoco_node
+[0.052s] [ 66%] Built target iiwa_pd_hold_node
+[0.052s] [ 83%] [32mBuilding CXX object CMakeFiles/iiwa_controller_node.dir/src/iiwa_controller_node.cpp.o[0m
+[4.754s] [100%] [32m[1mLinking CXX executable iiwa_controller_node[0m
+[4.937s] [100%] Built target iiwa_controller_node
+[4.944s] Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco -- -j6 -l6
+[4.944s] Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco
+[4.949s] -- Install configuration: ""
+[4.949s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_controller_node
+[4.951s] -- Set non-toolchain portion of runtime path of "/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_controller_node" to ""
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_mujoco_node
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/lib/iiwa_mujoco/iiwa_pd_hold_node
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/ament_index/resource_index/package_run_dependencies/iiwa_mujoco
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/ament_index/resource_index/parent_prefix_path/iiwa_mujoco
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/environment/ament_prefix_path.sh
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/environment/ament_prefix_path.dsv
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/environment/path.sh
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/environment/path.dsv
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/local_setup.bash
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/local_setup.sh
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/local_setup.zsh
+[4.952s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/local_setup.dsv
+[4.953s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.dsv
+[4.953s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/ament_index/resource_index/packages/iiwa_mujoco
+[4.953s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/cmake/iiwa_mujocoConfig.cmake
+[4.953s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/cmake/iiwa_mujocoConfig-version.cmake
+[4.953s] -- Up-to-date: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco/share/iiwa_mujoco/package.xml
+[4.953s] Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco

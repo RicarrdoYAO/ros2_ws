@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yaohouyu/ros2_ws/src/iiwa_mujoco_torque
+CMAKE_SOURCE_DIR = /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_torque
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque
+CMAKE_BINARY_DIR = /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque
 
 # Utility rule file for iiwa_mujoco_torque_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/iiwa_mujoco_torque_uninstall.dir/compiler_depend.make
 include CMakeFiles/iiwa_mujoco_torque_uninstall.dir/progress.make
 
 CMakeFiles/iiwa_mujoco_torque_uninstall:
-	/usr/bin/cmake -P /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 iiwa_mujoco_torque_uninstall: CMakeFiles/iiwa_mujoco_torque_uninstall
 iiwa_mujoco_torque_uninstall: CMakeFiles/iiwa_mujoco_torque_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/iiwa_mujoco_torque_uninstall.dir/clean:
 .PHONY : CMakeFiles/iiwa_mujoco_torque_uninstall.dir/clean
 
 CMakeFiles/iiwa_mujoco_torque_uninstall.dir/depend:
-	cd /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaohouyu/ros2_ws/src/iiwa_mujoco_torque /home/yaohouyu/ros2_ws/src/iiwa_mujoco_torque /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque /home/yaohouyu/ros2_ws/build/iiwa_mujoco_torque/CMakeFiles/iiwa_mujoco_torque_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_torque /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_torque /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_torque/CMakeFiles/iiwa_mujoco_torque_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/iiwa_mujoco_torque_uninstall.dir/depend
 

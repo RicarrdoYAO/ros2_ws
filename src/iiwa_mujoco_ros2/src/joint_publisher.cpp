@@ -24,7 +24,7 @@ public:
         };
 
         // 创建一个发布器，话题名 iiwa/joint_states
-        publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("iiwa/joint_states", 10);
+        publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("iiwa/joint_position_states", 10);
 
         // 创建一个 10 ms 触发一次的定时器 100 Hz
         timer_ = this->create_wall_timer(10ms, std::bind(&IiwaJointPublisher::on_timer, this));
@@ -33,12 +33,12 @@ public:
 private:
     void on_timer()
     {
-        auto msg = sensor_msgs::msg::JointState();
-        msg.header.stamp = this->get_clock()->now();
-        msg.name = joint_names_;
-
+        rclcpp::Time now = this->get_clock()->now();
+        double t = (now - start_time_).seconds();
         
-        double t = (this->now() - start_time_).seconds();
+        auto msg = sensor_msgs::msg::JointState();
+        msg.header.stamp = now;
+        msg.name = joint_names_;
 
         // 正弦关节运动
         msg.position.resize(joint_names_.size());

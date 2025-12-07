@@ -1,0 +1,95 @@
+[0.009s] Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_ros2 -DCMAKE_INSTALL_PREFIX=/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2
+[0.058s] -- The C compiler identification is GNU 13.3.0
+[0.092s] -- The CXX compiler identification is GNU 13.3.0
+[0.109s] -- Detecting C compiler ABI info
+[0.168s] -- Detecting C compiler ABI info - done
+[0.173s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.173s] -- Detecting C compile features
+[0.174s] -- Detecting C compile features - done
+[0.183s] -- Detecting CXX compiler ABI info
+[0.255s] -- Detecting CXX compiler ABI info - done
+[0.261s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.261s] -- Detecting CXX compile features
+[0.261s] -- Detecting CXX compile features - done
+[0.270s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.369s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.458s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.492s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.503s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.518s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.533s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.610s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.612s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.690s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.708s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.724s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.785s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.844s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.922s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.922s] -- Configured cppcheck include dirs: 
+[0.922s] -- Configured cppcheck exclude dirs and/or files: 
+[0.922s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.923s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.925s] -- Added test 'lint_cmake' to check CMake code style
+[0.925s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.928s] -- Added test 'uncrustify' to check C / C++ code style
+[0.928s] -- Configured uncrustify additional arguments: 
+[0.929s] -- Added test 'xmllint' to check XML markup files
+[0.930s] -- Configuring done (0.9s)
+[0.941s] -- Generating done (0.0s)
+[0.944s] -- Build files have been written to: /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2
+[0.956s] Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/yaohouyu/ros2_mujoco_ws/src/iiwa_mujoco_ros2 -DCMAKE_INSTALL_PREFIX=/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2
+[0.956s] Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2 -- -j6 -l6
+[0.989s] [ 25%] [32mBuilding CXX object CMakeFiles/iiwa_joint_publisher.dir/src/joint_publisher.cpp.o[0m
+[0.991s] [ 50%] [32mBuilding CXX object CMakeFiles/hello.dir/src/hello.cpp.o[0m
+[3.352s] [ 75%] [32m[1mLinking CXX executable hello[0m
+[3.471s] [ 75%] Built target hello
+[5.070s] [100%] [32m[1mLinking CXX executable iiwa_joint_publisher[0m
+[5.208s] [100%] Built target iiwa_joint_publisher
+[5.219s] Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2 -- -j6 -l6
+[5.222s] Invoking command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2
+[5.227s] -- Install configuration: ""
+[5.227s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib/iiwa_mujoco_ros2/hello
+[5.227s] -- Set non-toolchain portion of runtime path of "/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib/iiwa_mujoco_ros2/hello" to ""
+[5.227s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib/iiwa_mujoco_ros2/iiwa_joint_publisher
+[5.229s] -- Set non-toolchain portion of runtime path of "/home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/lib/iiwa_mujoco_ros2/iiwa_joint_publisher" to ""
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/scene2.xml
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/README.md
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/scene.xml
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_5.obj
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/band.obj
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_6_orange.obj
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/kuka.obj
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_0.obj
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_4_orange.obj
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_3.obj
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_2_orange.obj
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_7.obj
+[5.230s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_2_grey.obj
+[5.231s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_6_grey.obj
+[5.231s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_1.obj
+[5.235s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/assets/link_4_grey.obj
+[5.235s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/iiwa14.xml
+[5.235s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/CHANGELOG.md
+[5.236s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/LICENSE
+[5.236s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/models/iiwa_14.png
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/launch
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/launch/simulation.launch.py
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/ament_index/resource_index/package_run_dependencies/iiwa_mujoco_ros2
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/ament_index/resource_index/parent_prefix_path/iiwa_mujoco_ros2
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/environment/ament_prefix_path.sh
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/environment/ament_prefix_path.dsv
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/environment/path.sh
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/environment/path.dsv
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/local_setup.bash
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/local_setup.sh
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/local_setup.zsh
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/local_setup.dsv
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.dsv
+[5.250s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/ament_index/resource_index/packages/iiwa_mujoco_ros2
+[5.251s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/cmake/iiwa_mujoco_ros2Config.cmake
+[5.251s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/cmake/iiwa_mujoco_ros2Config-version.cmake
+[5.251s] -- Installing: /home/yaohouyu/ros2_mujoco_ws/install/iiwa_mujoco_ros2/share/iiwa_mujoco_ros2/package.xml
+[5.253s] Invoked command in '/home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/yaohouyu/ros2_mujoco_ws/build/iiwa_mujoco_ros2

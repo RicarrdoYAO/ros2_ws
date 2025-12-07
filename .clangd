@@ -1,6 +1,13 @@
 CompileFlags:
+  Add: [
+    "-isystem", "/opt/ros/jazzy/include",
+    "-isystem", "/opt/ros/jazzy/include/sensor_msgs",
+    "-isystem", "/opt/ros/jazzy/include/std_msgs",
+    "-isystem", "/opt/ros/jazzy/include/geometry_msgs"
+  ]
   Compiler: /usr/bin/g++
-  
+
 Diagnostics:
-  Suppress:
-    - unused-includes
+  Suppress: [
+    unused-includes
+  ]
