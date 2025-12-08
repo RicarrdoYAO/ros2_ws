@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from rclpy.serialization import deserialize_message
 from sensor_msgs.msg import JointState
 
-bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251208_151447"   
+bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251208_163812"   
 
 reader = rosbag2_py.SequentialReader()
 storage_options = rosbag2_py.StorageOptions(uri=bag_path, storage_id="mcap")
@@ -47,19 +47,6 @@ plt.legend()
 plt.title("Velocity Check (Joint 1)")
 plt.show()
 
-dt = 0.001  # 你的 MuJoCo timestep
-
-dq_idx = np.zeros_like(q)
-dq_idx[1:, :] = (q[1:, :] - q[:-1, :]) / dt
-
-plt.figure()
-plt.plot(times, dq[:,0], label="dq(topic)")   # 来自 joint_states.velocity
-plt.plot(times, dq_idx[:,0], "--", label="dq_from_q_fixed_dt")
-plt.legend()
-plt.grid()
-plt.show()
-
-
 
 # 正弦轨迹
 amp = np.array([0.5]*7)
@@ -91,7 +78,7 @@ for i in range(7):
     axes[i,0].grid()
 
    # 第二列：速度
-    axes[i,1].plot(times, dq_real[:,i], label="real (topic)")
+    axes[i,1].plot(times, dq_num[:,i], label="real (topic)")
     axes[i,1].plot(times, dqd[:,i], "--", label="ref")
     axes[i,1].grid()
 
@@ -115,3 +102,9 @@ axes[-1].set_xlabel("Time (s)")
 fig.suptitle("Position Tracking Errors", fontsize=14)
 plt.tight_layout()
 plt.show()
+
+# 避免除以0，取一个中间段的数据计算均值比例
+mask = np.abs(dq_real[:, 0]) > 0.1  # 只看有速度的时候
+if np.any(mask):
+    ratio = np.mean(dq_real[mask, 0] / dq_num[mask, 0])
+    print(f"Ratio (Topic / Numeric): {ratio:.4f}")
