@@ -4,16 +4,16 @@ import matplotlib.pyplot as plt
 from rclpy.serialization import deserialize_message
 from sensor_msgs.msg import JointState
 
-bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251208_163812"   
+bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251208_184557"
 
+# 读取 MCAP
 reader = rosbag2_py.SequentialReader()
 storage_options = rosbag2_py.StorageOptions(uri=bag_path, storage_id="mcap")
 converter_options = rosbag2_py.ConverterOptions("", "")
 reader.open(storage_options, converter_options)
 
+# 存储
 times, q_list, dq_list, tau_list = [], [], [], []
-
-start_time = None
 
 while reader.has_next():
     topic, data, _ = reader.read_next()
@@ -22,89 +22,92 @@ while reader.has_next():
 
     msg = deserialize_message(data, JointState)
 
+    # 使用仿真时间（绝对时间，不归零）
     t_sec = msg.header.stamp.sec + msg.header.stamp.nanosec * 1e-9
+    times.append(t_sec)
 
-    if start_time is None:
-        start_time = t_sec
-
-    times.append(t_sec - start_time)
     q_list.append(msg.position)
     dq_list.append(msg.velocity)
     tau_list.append(msg.effort)
 
+# 转数组
 times = np.array(times)
 q = np.array(q_list)
 dq = np.array(dq_list)
 tau = np.array(tau_list)
 
-# 使用 joint_states.velocity 作为真实速度
-dq_real = dq  # 因为我们从 bag 里读出来的 dq 就是 msg.velocity
+# ---------------------------
+#  正弦参考轨迹（与控制器完全一致）
+# ---------------------------
+
+amp = np.array([0.5] * 7)
+freq = np.array([4.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1])
+
+# 参考位置
+qd = amp * np.sin(freq * times[:, None])
+
+# 参考速度（直接解析形式，比 gradient 更平滑）
+dqd = amp * freq * np.cos(freq * times[:, None])
+
+# 数值求导实际速度（验证用）
+dq_num = np.gradient(q, axis=0) / np.gradient(times)[:, None]
+
+# ---------------------------
+#  Plot: 单关节速度检查
+# ---------------------------
 
 plt.figure()
-plt.plot(times, dq_real[:,0], label="dq(topic)")
-plt.plot(times, dq[:,0], "--", label="dq_ref")
+plt.plot(times, dq[:, 0], label="dq(topic)")
+plt.plot(times, dqd[:, 0], "--", label="dq_ref")
 plt.legend()
 plt.title("Velocity Check (Joint 1)")
 plt.show()
 
+# ---------------------------
+# 7x3 子图（位置，速度，力矩）
+# ---------------------------
 
-# 正弦轨迹
-amp = np.array([0.5]*7)
-freq = np.array([0.5,0.6,0.7,0.8,0.9,1.0,1.1])
-
-qd  = amp * np.sin(freq * times[:,None])
-# 对参考位置求导得到参考速度
-dqd = np.zeros_like(qd)
+fig, axes = plt.subplots(7, 3, figsize=(16, 18))
 for i in range(7):
-    dqd[:,i] = np.gradient(qd[:,i], times)
+    # 位置对比
+    axes[i, 0].plot(times, q[:, i], label="real")
+    axes[i, 0].plot(times, qd[:, i], "--", label="ref")
+    axes[i, 0].grid()
+    
+    # 速度对比
+    axes[i, 1].plot(times, dq[:, i], label="real")
+    axes[i, 1].plot(times, dqd[:, i], "--", label="ref")
+    axes[i, 1].grid()
 
-# 对实际位置求导得到数值速度
-dq_num = np.zeros_like(q)
-for i in range(7):
-    dq_num[:,i] = np.gradient(q[:,i], times)
-
-plt.figure()
-plt.plot(times, dq[:,0], label="dq(topic)")
-plt.plot(times, dq_num[:,0], "--", label="dq_num")
-plt.legend()
-plt.title("Velocity Check (Joint 1)")
-plt.show()
-
-# 7x3 plot
-fig, axes = plt.subplots(7, 3, figsize=(16,18))
-for i in range(7):
-    axes[i,0].plot(times, q[:,i], label="real")
-    axes[i,0].plot(times, qd[:,i], "--", label="ref")
-    axes[i,0].grid()
-
-   # 第二列：速度
-    axes[i,1].plot(times, dq_num[:,i], label="real (topic)")
-    axes[i,1].plot(times, dqd[:,i], "--", label="ref")
-    axes[i,1].grid()
-
-
-    axes[i,2].plot(times, tau[:,i], label="tau")
-    axes[i,2].grid()
+    # 力矩
+    axes[i, 2].plot(times, tau[:, i], label="tau")
+    axes[i, 2].grid()
 
 plt.tight_layout()
 plt.show()
 
+# ---------------------------
+# 误差图
+# ---------------------------
 
 fig, axes = plt.subplots(7, 1, figsize=(10, 14))
 for i in range(7):
-    error = q[:,i] - qd[:,i]
+    error = q[:, i] - qd[:, i]
     axes[i].plot(times, error, label=f"Joint {i+1} Error")
     axes[i].set_ylabel(f"Joint {i+1} Error (rad)")
     axes[i].grid()
     axes[i].legend()
 
-axes[-1].set_xlabel("Time (s)")
+axes[-1].set_xlabel("Simulation Time (s)")
 fig.suptitle("Position Tracking Errors", fontsize=14)
 plt.tight_layout()
 plt.show()
 
-# 避免除以0，取一个中间段的数据计算均值比例
-mask = np.abs(dq_real[:, 0]) > 0.1  # 只看有速度的时候
+# ---------------------------
+# 速度比例检查（可选）
+# ---------------------------
+
+mask = np.abs(dq[:, 0]) > 0.1
 if np.any(mask):
-    ratio = np.mean(dq_real[mask, 0] / dq_num[mask, 0])
-    print(f"Ratio (Topic / Numeric): {ratio:.4f}")
+    ratio = np.mean(dq[mask, 0] / dq_num[mask, 0])
+    print(f"Velocity Ratio (Topic / Numeric): {ratio:.4f}")

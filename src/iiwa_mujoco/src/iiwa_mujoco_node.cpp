@@ -41,37 +41,7 @@ public:
         RCLCPP_INFO(this->get_logger(), "MuJoCo timestep: %.6f, n_steps per 10ms: %d", 
     m_->opt.timestep, static_cast<int>(0.01 / m_->opt.timestep));
 
-        // 初始化可视化
-        if (!glfwInit()) {
-            throw std::runtime_error("GLFW init failed");
-        }
-
-        window_ = glfwCreateWindow(1200, 900, "IIWA MuJoCo Simulation", NULL, NULL);
-        if (!window_) {
-            glfwTerminate();
-            throw std::runtime_error("GLFW window creation failed");
-        }
-
-        glfwMakeContextCurrent(window_);
-        glfwSwapInterval(1);
-
-        // 初始化 MuJoCo 可视化
-        mjv_defaultCamera(&cam_);
-        mjv_defaultOption(&opt_);
-        mjv_defaultScene(&scn_);
-        mjr_defaultContext(&con_);
-
-        mjv_makeScene(m_, &scn_, 2000);
-        mjr_makeContext(m_, &con_, mjFONTSCALE_150);
-
-        // 设置固定相机视角
-        cam_.lookat[0] = 0.0;
-        cam_.lookat[1] = 0.0;
-        cam_.lookat[2] = 0.5;
-        cam_.distance = 3.0;
-        cam_.azimuth = 135;
-        cam_.elevation = -20;
-
+        
         // ROS 通信
         joint_names_ = {"joint1", "joint2", "joint3", "joint4", "joint5", "joint6", "joint7"};
         pub_state_ = this->create_publisher<sensor_msgs::msg::JointState>("iiwa/joint_states", 10);
@@ -84,10 +54,7 @@ public:
 
     ~IiwaMujocoSim()
     {
-        mjv_freeScene(&scn_);
-        mjr_freeContext(&con_);
-        glfwDestroyWindow(window_);
-        glfwTerminate();
+        
 
         if (d_) mj_deleteData(d_);
         if (m_) mj_deleteModel(m_);
@@ -106,29 +73,21 @@ private:
 
     void sim_step()
     {
-        if (glfwWindowShouldClose(window_)) {
-            rclcpp::shutdown();
-            return;
-        }
-
+      
         // 物理仿真
         int n_steps = static_cast<int>(0.001 / m_->opt.timestep);
         for (int i = 0; i < n_steps; ++i) {
             mj_step(m_, d_);
         }
 
-        // 渲染
-        int width, height;
-        glfwGetFramebufferSize(window_, &width, &height);
-        mjv_updateScene(m_, d_, &opt_, NULL, &cam_, mjCAT_ALL, &scn_);
-        mjrRect viewport = {0, 0, width, height};
-        mjr_render(viewport, &scn_, &con_);
-        glfwSwapBuffers(window_);
-        glfwPollEvents();
+        //验证仿真时间和控制时间是否对齐
+        // RCLCPP_INFO(this->get_logger(),
+        //     "sim_time = %.6f", d_->time);
 
         // 发布关节状态
         auto msg = sensor_msgs::msg::JointState();
-        msg.header.stamp = this->now();
+        msg.header.stamp = rclcpp::Time(d_->time * 1e9);
+
         msg.name = joint_names_;
         
         int num_joints = std::min((int)joint_names_.size(), m_->nq);
@@ -145,6 +104,7 @@ private:
         }
         pub_state_->publish(msg);
     }
+    
 
     mjModel* m_ = nullptr;
     mjData* d_ = nullptr;
