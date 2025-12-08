@@ -7,7 +7,7 @@
 
 using namespace std::chrono_literals;
 
-// 类名改为了 CTCController 以区分
+
 class IiwaCTCController : public rclcpp::Node
 {
 public:
@@ -24,18 +24,14 @@ public:
         timer_ = this->create_wall_timer(
             1ms, std::bind(&IiwaCTCController::control_loop, this));
 
-
-
         Kp_ = {300.0, 200.0, 400.0, 400.0, 500.0, 500.0, 500.0};
         Kd_ = { 30.0,  30.0,  36.0,  36.0,  40.0,  40.0,  40.0};
-
-
 
         q_.resize(7, 0.0);
         dq_.resize(7, 0.0);
         qd_.resize(7, 0.0);
         dqd_.resize(7, 0.0);
-        ddqd_.resize(7, 0.0); // [新增] 期望加速度
+        ddqd_.resize(7, 0.0); 
 
         initialized_ = false;
 

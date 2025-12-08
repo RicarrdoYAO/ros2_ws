@@ -14,3 +14,4 @@ source ~/.bashrc
 5. ros2 run iiwa_mujoco_torque torque_controller 
 6. ros2 topic echo /iiwa/joint_states
    ros2 topic echo /iiwa/joint_states --flow-style > joint_states.json
+   ros2 launch iiwa_mujoco iiwa_sim_ctrl_bag.launch.py

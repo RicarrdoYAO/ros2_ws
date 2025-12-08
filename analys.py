@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from rclpy.serialization import deserialize_message
 from sensor_msgs.msg import JointState
 
-bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251207_215148"   # 改成你的路径
+bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251208_151447"   
 
 reader = rosbag2_py.SequentialReader()
 storage_options = rosbag2_py.StorageOptions(uri=bag_path, storage_id="mcap")
@@ -37,6 +37,30 @@ q = np.array(q_list)
 dq = np.array(dq_list)
 tau = np.array(tau_list)
 
+# 使用 joint_states.velocity 作为真实速度
+dq_real = dq  # 因为我们从 bag 里读出来的 dq 就是 msg.velocity
+
+plt.figure()
+plt.plot(times, dq_real[:,0], label="dq(topic)")
+plt.plot(times, dq[:,0], "--", label="dq_ref")
+plt.legend()
+plt.title("Velocity Check (Joint 1)")
+plt.show()
+
+dt = 0.001  # 你的 MuJoCo timestep
+
+dq_idx = np.zeros_like(q)
+dq_idx[1:, :] = (q[1:, :] - q[:-1, :]) / dt
+
+plt.figure()
+plt.plot(times, dq[:,0], label="dq(topic)")   # 来自 joint_states.velocity
+plt.plot(times, dq_idx[:,0], "--", label="dq_from_q_fixed_dt")
+plt.legend()
+plt.grid()
+plt.show()
+
+
+
 # 正弦轨迹
 amp = np.array([0.5]*7)
 freq = np.array([0.5,0.6,0.7,0.8,0.9,1.0,1.1])
@@ -66,9 +90,11 @@ for i in range(7):
     axes[i,0].plot(times, qd[:,i], "--", label="ref")
     axes[i,0].grid()
 
-    axes[i,1].plot(times, dq_num[:,i], label="real")
+   # 第二列：速度
+    axes[i,1].plot(times, dq_real[:,i], label="real (topic)")
     axes[i,1].plot(times, dqd[:,i], "--", label="ref")
     axes[i,1].grid()
+
 
     axes[i,2].plot(times, tau[:,i], label="tau")
     axes[i,2].grid()
