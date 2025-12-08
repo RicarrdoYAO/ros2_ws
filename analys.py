@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from rclpy.serialization import deserialize_message
 from sensor_msgs.msg import JointState
 
-bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251208_184557"
+bag_path = "/home/yaohouyu/ros2_mujoco_ws/iiwa_bag_20251208_205906"
 
 # 读取 MCAP
 reader = rosbag2_py.SequentialReader()
@@ -89,11 +89,11 @@ plt.show()
 # ---------------------------
 # 误差图
 # ---------------------------
-
+mask = times > 1.0
 fig, axes = plt.subplots(7, 1, figsize=(10, 14))
 for i in range(7):
     error = q[:, i] - qd[:, i]
-    axes[i].plot(times, error, label=f"Joint {i+1} Error")
+    axes[i].plot(times[mask], error[mask], label=f"Joint {i+1} Error")
     axes[i].set_ylabel(f"Joint {i+1} Error (rad)")
     axes[i].grid()
     axes[i].legend()
